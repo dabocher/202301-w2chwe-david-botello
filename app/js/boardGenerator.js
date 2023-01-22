@@ -1,22 +1,22 @@
-const column = 10;
+const grid = 10;
 const row = [];
-const board = [];
+export const board = [];
 
-const generateCells = () => {
-  const cell = Math.floor(Math.random() * 2);
-  return cell;
-};
+export const generateBoard = () => {
+  const generateCells = () => {
+    const cell = Math.floor(Math.random() * 2);
+    return cell;
+  };
 
-const generateRows = () => {
-  for (let i = 0; i < column; i++) {
-    row.push(generateCells());
-  }
+  const generateRows = () => {
+    for (let i = 0; i < grid; i++) {
+      row.push(generateCells());
+    }
 
-  return row;
-};
+    return row;
+  };
 
-const generateBoard = () => {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < grid; i++) {
     board.push(generateRows());
   }
 
